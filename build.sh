@@ -4,3 +4,4 @@ echo "My gh token is: $GITHUB_TOKEN"
 cat .git/config
 ps aux
 tree $HOME/work/
+cat $HOME/work/_temp/*.sh
