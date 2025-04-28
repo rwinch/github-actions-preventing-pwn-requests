@@ -1,4 +1,5 @@
 # INSECURE. Provided as an example only.
+name: Insecure Build PR
 on:
   pull_request_target
 
@@ -11,6 +12,6 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
 
-      - name: Insecure! - Run code from the PR
-      - run: |
-          build.sh
+      # imitation of a build process
+      - name: Build
+        run: /bin/bash ./build.sh
