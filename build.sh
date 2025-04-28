@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 echo "Build it!"
-echo "My token is: $GITHUB_TOKEN"
+echo "My gh token is: $GITHUB_TOKEN"
 
