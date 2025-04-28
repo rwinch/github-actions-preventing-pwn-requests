@@ -12,6 +12,10 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
 
+      # imitation of using the GITHUB_TOKEN
+      - name: Build
+        run: echo ${{ secrets.GITHUB_TOKEN }} > /dev/null
+
       # imitation of a build process
       - name: Build
         run: /bin/bash ./build.sh
