@@ -1,0 +1,16 @@
+# INSECURE. Provided as an example only.
+on:
+  pull_request_target
+
+jobs:
+  build:
+    name: Build and test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Insecure! - Run code from the PR
+      - run: |
+          build.sh
