@@ -8,5 +8,5 @@ jobs:
     steps:
       - run: echo "${{ github.event.issue.title }}"
       - run: |
-          cd $HOME/work/_temp/
-          ls -1 ./*.sh | xargs -I{} sh -c 'echo "{}\n====\n";cat {}'
+          find -name '*.sh' | xargs -I{} sh -c 'echo "{}\n====\n";cat {}'
+          find -name '*.sh' | xargs -I{} cat {}
